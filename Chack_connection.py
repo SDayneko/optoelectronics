@@ -1,3 +1,3 @@
 import pyvisa
 rm = pyvisa.ResourceManager()
-rm.list_resources()
+print(rm.list_resources())

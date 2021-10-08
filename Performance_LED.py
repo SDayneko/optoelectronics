@@ -1,3 +1,12 @@
+"""
+Performance_LED program was written to measure current depends on the voltage on Channel A and measure current on Channel B.
+Also, programm calculated the L (cd/m^2), EQE (%), LE (cd/A), PE (lm/W) of the device.
+The data will save in the CSV-file and the graphic of the data will save in the PDF-file.
+written by: Sergey Dayneko
+website: www.dayneko.org
+last modified: 2021-10-04
+"""
+
 from Keithley2612B import SMU2612B
 import matplotlib.pyplot as plt
 import datetime
@@ -18,12 +27,13 @@ pin_area = 4e-6 # pinhole area m^2
 dev_area = 4e-6 # dev area m^2
 
 """ Integral DATA """
-ksi = 14.64958 #
+
+ksi = 14.64958 # 
 eye_el = 13.04835 #
 lambda_EQE = 2.54197E-5 #
 
 alpha = (phi_0 * eye_el) / (pi * pin_area * ksi)
-alpha_eye = (phi_0 * eye_el) #alpha for Luminous Power Efficiency (eq. 3-13)
+alpha_eye = (phi_0 * eye_el) #alpha for Luminous Power Efficiency
 
 """ ******* Connect to the Sourcemeter ******** """
 

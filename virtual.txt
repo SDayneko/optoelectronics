@@ -1,3 +1,8 @@
 python3 -m venv venv
 . venv/bin/activate
 python -m pip install -r requirements.txt
+
+git add -A
+git commit -m "xxx"
+git pull
+git push

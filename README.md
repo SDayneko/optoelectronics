@@ -3,7 +3,7 @@ It is software used to test optoelectronic devices.
 The NI-VISA is used to control a Keithley  source measure unit (SMU) .  Additional information about NI-VISA can be found on the following website: https://pyvisa.readthedocs.io/en/1.8/getting_nivisa.html
 
 Keithley2612B library was written on Python to control Keithley 2612B.
-Please, contact the writer of the program to add other models of Keithley.
+Please, contact the writer of the program to add other Kiethly SMU models.
 
 J-V_curve.py program was written on Python to check correct connection of the Keithley2612B and measures voltage dependent current on Channel A and current on Channel B. The data from the collected J-V curve will be saved in a csv-file.
 

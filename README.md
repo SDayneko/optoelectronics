@@ -5,12 +5,7 @@ The NI-VISA is used to control a Keithley  source measure unit (SMU) .  Addition
 Keithley2612B library was written on Python to control Keithley 2612B.
 Please, contact the writer of the program to add other Kiethly SMU models.
 
-## Program to measure light emitting diodes (OLEDs, PLEDs, QLEDs, QD-OLEDs and PeLEDs)
-OLEDs - organic light-emitting diodes
-PLEDs - polymer light-emitting diodes
-QLEDs - quantum dots light-emitting diodes
-QD-OLEDs - quantum dots-organic light-emitting diodes
-PeLEDs - perovskite light-emitting diodes
+## Script to check connection of the keithley SMU to the PC:
 
 J-V_curve.py program was written on Python to check correct connection of the Keithley2612B and measures voltage dependent current on Channel A and current on Channel B. The data from the collected J-V curve will be saved in a csv-file.
 
@@ -21,10 +16,17 @@ $ rm = pyvisa.ResourceManager()
 $ print(rm.list_resources())
 ```
 
-Finally, use the performance_LED.py script to measure and calculate  the performance of OLEDs/QLEDs. 
+## Script to measure light emitting diodes (OLEDs, PLEDs, QLEDs, QD-OLEDs and PeLEDs)
+OLEDs - organic light-emitting diodes
+PLEDs - polymer light-emitting diodes
+QLEDs - quantum dots light-emitting diodes
+QD-OLEDs - quantum dots-organic light-emitting diodes
+PeLEDs - perovskite light-emitting diodes
+
+Use the performance_LED.py script to measure and calculate  the performance of LEDs. 
 All data will be saved in a csv-file.
 
-## Program to measure photovoltaic devices (OPVs, OSCs, PSCs and QSCs)
+## Script to measure photovoltaic devices (OPVs, OSCs, PSCs and QSCs)
 OPVs - organic photovoltaics
 OSCs - organic solar cells
 PSCs - perovskite solar cells

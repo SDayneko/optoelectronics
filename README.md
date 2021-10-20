@@ -10,7 +10,7 @@ Please, contact the writer of the program to add other Kiethly SMU models.
 J-V_curve.py program was written on Python to check correct connection of the Keithley2612B and measures voltage dependent current on Channel A and current on Channel B. The data from the collected J-V curve will be saved in a csv-file.
 
 Before starting the J-V curve program, the IP address needs to be changed depending on which SMU you are using. Use the following code to check your connection of the keithley SMU to the PC (check_connection.py, script):
-```
+```python
 $ import pyvisa
 $ rm = pyvisa.ResourceManager()
 $ print(rm.list_resources())
@@ -31,3 +31,6 @@ OPVs - organic photovoltaics
 OSCs - organic solar cells
 PSCs - perovskite solar cells
 QSCs - quantum dots solar cells
+
+## License
+[MIT](https://github.com/SDayneko/optoelectronics/blob/main/LICENSE)

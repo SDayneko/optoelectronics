@@ -11,9 +11,9 @@ J-V_curve.py program was written on Python to check correct connection of the Ke
 
 Before starting the J-V curve program, the IP address needs to be changed depending on which SMU you are using. Use the following code to check your connection of the keithley SMU to the PC (check_connection.py, script):
 ```python
-$ import pyvisa
-$ rm = pyvisa.ResourceManager()
-$ print(rm.list_resources())
+import pyvisa
+rm = pyvisa.ResourceManager()
+print(rm.list_resources())
 ```
 
 ## Script to measure light emitting diodes (OLEDs, PLEDs, QLEDs, QD-OLEDs and PeLEDs)

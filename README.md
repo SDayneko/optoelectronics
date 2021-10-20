@@ -7,7 +7,11 @@ The NI-VISA is used to control a Keithley  source measure unit (SMU) .  Addition
 Keithley2612B library was written on Python to control [Keithley 2612B](https://www.tek.com/keithley-source-measure-units/smu-2600b-series-sourcemeter).
 Please, contact the writer of the program to add other Kiethly SMU models.
 
-## Before to start.
+## Before to start:
+Use the next command to install necessary libraries::
+```bash
+python -m pip install -r requirements.txt
+```
 
 ## Script to check connection of the keithley SMU to the PC:
 

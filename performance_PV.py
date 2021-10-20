@@ -13,32 +13,6 @@ import datetime
 import csv
 import time
 
-""" ****** Parametres to calculate performance **** """
-""" CONCTANT """
-
-q = 1.6e-19 #Elementary charge (C)
-hc = 1.98e-25 #Planck constant * c (J * m)
-phi_0 = 683 #maximum spectral efficacy lm/W
-pi = 3.14 #pi
-
-""" Area of Si-photodiod """
-
-si_p_area = 10e-6 # Si-photodiod area m^2
-
-""" Area of the device """
-
-pin_area = 4e-6 # pinhole area m^2
-dev_area = 4e-6 # dev area m^2
-
-""" Integral DATA for Si-photodiod """
-
-ksi = 14.64958 # 
-eye_el = 13.04835 # 
-lambda_EQE = 2.54197E-5 # 
-
-alpha = (phi_0 * eye_el) / (pi * pin_area * ksi)
-alpha_eye = (phi_0 * eye_el) #alpha for Luminous Power Efficiency
-
 """ ******* Connect to the Sourcemeter ******** """
 
 # initialize the Sourcemeter and connect to it
@@ -74,6 +48,32 @@ smu_B.set_voltage_limit(0.2)
 smu_B.enable_current_autorange
 smu_B.set_sense_2wire()
 smu_B.set_measurement_speed_normal()
+
+""" ****** Parametres to calculate performance **** """
+""" CONCTANT """
+
+q = 1.6e-19 #Elementary charge (C)
+hc = 1.98e-25 #Planck constant * c (J * m)
+phi_0 = 683 #maximum spectral efficacy lm/W
+pi = 3.14 #pi
+
+""" Area of Si-photodiod """
+
+si_p_area = 10e-6 # Si-photodiod area m^2
+
+""" Area of the device """
+
+pin_area = 4e-6 # pinhole area m^2
+dev_area = 4e-6 # dev area m^2
+
+""" Integral DATA for Si-photodiod """
+
+ksi = 14.64958 # 
+eye_el = 13.04835 # 
+lambda_EQE = 2.54197E-5 # 
+
+alpha = (phi_0 * eye_el) / (pi * pin_area * ksi)
+alpha_eye = (phi_0 * eye_el) #alpha for Luminous Power Efficiency
 
 """ ******* For saving the data ******** """
 

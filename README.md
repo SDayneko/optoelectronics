@@ -5,10 +5,17 @@ The NI-VISA is used to control a Keithley  source measure unit (SMU) .  Addition
 Keithley2612B library was written on Python to control Keithley 2612B.
 Please, contact the writer of the program to add other Kiethly SMU models.
 
+## Before to start.
+
 ## Script to check connection of the keithley SMU to the PC:
 
 J-V_curve.py program was written on Python to check correct connection of the Keithley2612B and measures voltage dependent current on Channel A and current on Channel B. The data from the collected J-V curve will be saved in a csv-file.
 
+First, use your own adress of connection keythley SMU to PC, here is an example of my conncetion in the script:
+```python
+sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
+```
+Then, use the next command to start your script:
 ```bash
 python J-V_curve.py
 ```
@@ -31,14 +38,27 @@ QLEDs - quantum dots light-emitting diodes
 QD-OLEDs - quantum dots-organic light-emitting diodes
 PeLEDs - perovskite light-emitting diodes
 
-Use the performance_LED.py script to measure and calculate  the performance of LEDs. 
+Use the performance_LED.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.
+
+First, use your own adress of connection keythley SMU to PC, here is an example of my conncetion in the script:
+```python
+sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
+```
 
 ## Script to measure photovoltaic devices (OPVs, OSCs, PSCs and QSCs)
 OPVs - organic photovoltaics
 OSCs - organic solar cells
 PSCs - perovskite solar cells
 QSCs - quantum dots solar cells
+
+Use the performance_PV.py script to measure and calculate the performance of LEDs. 
+All data will be saved in a csv-file.
+
+First, use your own adress of connection keythley SMU to PC, here is an example of my conncetion in the script:
+```python
+sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
+```
 
 ## License
 [MIT](https://github.com/SDayneko/optoelectronics/blob/main/LICENSE)

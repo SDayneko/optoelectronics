@@ -34,11 +34,13 @@ python check_connection.py
 ```
 
 ## Script to measure light emitting diodes (OLEDs, PLEDs, QLEDs, QD-OLEDs and PeLEDs)
-OLEDs - organic light-emitting diodes
-PLEDs - polymer light-emitting diodes
-QLEDs - quantum dots light-emitting diodes
-QD-OLEDs - quantum dots-organic light-emitting diodes
-PeLEDs - perovskite light-emitting diodes
+<ul class="list-group">
+  <li class="list-group-item">OLEDs - organic light-emitting diodes</li>
+  <li class="list-group-item">PLEDs - polymer light-emitting diodes</li>
+  <li class="list-group-item">QLEDs - quantum dots light-emitting diodes</li>
+  <li class="list-group-item">QD-OLEDs - quantum dots-organic light-emitting diodes</li>
+  <li class="list-group-item">PeLEDs - perovskite light-emitting diodes</li>
+</ul>
 
 Use the performance_LED.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.
@@ -49,10 +51,12 @@ sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
 ```
 
 ## Script to measure photovoltaic devices (OPVs, OSCs, PSCs and QDSCs)
-OPVs - organic photovoltaics
-OSCs - organic solar cells
-PSCs - perovskite solar cells
-QDSCs - quantum dots solar cells
+<ul class="list-group">
+  <li class="list-group-item">OPVs - organic photovoltaics</li>
+  <li class="list-group-item">OSCs - organic solar cells</li>
+  <li class="list-group-item">PSCs - perovskite solar cells</li>
+  <li class="list-group-item">QDSCs - quantum dots solar cells</li>
+</ul>
 
 Use the performance_PV.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.

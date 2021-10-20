@@ -15,7 +15,7 @@ First, use your own adress of connection keythley SMU to PC, here is an example 
 ```python
 sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
 ```
-Then, use the next command to start your script:
+Then, use the next command to start script:
 ```bash
 python J-V_curve.py
 ```
@@ -26,7 +26,7 @@ import pyvisa
 rm = pyvisa.ResourceManager()
 print(rm.list_resources())
 ```
-or use:
+or use the next command to start script:
 ```bash
 python check_connection.py
 ```

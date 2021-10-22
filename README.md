@@ -87,6 +87,27 @@ The same result can be obtained by integrate the electroluminescent spectrum S'(
 
 ![Electroluminescence spectrum of the white warm LED](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_3.png)
 
+Next, calculate the illuminance of a light source Ev in lm/m^2 = lux:
+
+![Equation 2](https://github.com/SDayneko/optoelectronics/blob/main/img/Equation_2.png)
+
+where the coefficient Km is equal to 683 lm/W, V(λ) is the spectral luminosity factor for human photopic vision (Figure S4). Note that this function is usually given normalized at a wavelength of ~555 nm; in which case the function must be multiplied by a factor Km of ~683 lm/W before being employed in the calculations.
+
+![The standard sensitivity curve of human eye.](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_3.png)
+
+2. Parameters that must calculate for the PV script.
+
+The "int_si_spec" is equal:
+
+![int_si_spec](https://github.com/SDayneko/optoelectronics/blob/main/img/int_si_spec.png)
+
+The "int_spec" is equal:
+
+![int_spec](https://github.com/SDayneko/optoelectronics/blob/main/img/int_si_spec.png)
+
+The "eye_el" is equal:
+
+![eye_el](https://github.com/SDayneko/optoelectronics/blob/main/img/eye_el.png)
 
 Use the performance_PV.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.

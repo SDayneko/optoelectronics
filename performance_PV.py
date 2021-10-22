@@ -59,7 +59,7 @@ pi = 3.14 #pi
 
 """ Area of Si-photodiod """
 
-si_p_area = 10e-6 # Si-photodiod area m^2
+si_p_area = 1e-4 # 100 mm^2 Si-photodiod area m^2
 
 """ Area of the device """
 
@@ -68,12 +68,10 @@ dev_area = 4e-6 # dev area m^2
 
 """ Integral DATA for Si-photodiod """
 
-ksi = 14.64958 # 
-eye_el = 13.04835 # 
-lambda_EQE = 2.54197E-5 # 
+int_si_spec = 1 # Integral of the responsivity of the photodetector multiplied on the spectrum of the source (LED).
+int_spec = 1 # Integral of the spectrum of the source (LED).
+eye_el = 1 # Integral of the responsivity of the photodetector multiplied on the spectrum of the source (LED).
 
-alpha = (phi_0 * eye_el) / (pi * pin_area * ksi)
-alpha_eye = (phi_0 * eye_el) #alpha for Luminous Power Efficiency
 
 """ ******* For saving the data ******** """
 
@@ -85,7 +83,7 @@ filename_pdf = 'test-' + time_for_name +'-scan1.pdf'
 # Header for
 with open(filename_csv, 'a') as csvfile:
         writer = csv.writer(csvfile, delimiter=',',  lineterminator='\n')
-        writer.writerow(["Voltage (V)", "Current (mA)", "Current_pd (mA)", "Current (mA/cm^2)", "L (cd/m^2)", "EQE (%)", "LE (cd/A)", "PE (lm/W)"])
+        writer.writerow(["Voltage (V)", "Current (mA)", "Current_pd (mA)", "Current (mA/cm^2)", "light power (mW/cm^2)", "Illuminance (lux)"])
 """ ******* Make a voltage-sweep and do some measurements ******** """
 # define sweep parameters
 sweep_start = -2
@@ -131,9 +129,9 @@ for nr in range(steps):
         data_voltage.append(voltage)
         data_current.append(current * 1000)
         data_current_cm.append((current*1000)/(dev_area*1e4))
-        data_current_pd_a.append(current_pd_a * (-1000))
-        data_L.append(alpha*(current_pd_a*(-1))) #L (cd/m^2) for graphics
-        print('Voltage: '+str(voltage)+'V; Current:'+str(current * 1000)+'mA; J: '+str((1000*current)/(dev_area*1e4))+'mA/cm^2; Current_PD: '+str(current_pd_a*(-1000))+'mA; L:'+str(alpha*(current_pd_a*(-1)))+'cd/m^2')
+        data_current_pd_a.append(current_pd_a * 1000)
+        data_L.append((((current_pd_a * 1000)/(si_p_area * 1e4))/int_si_spec) * int_spec) #Light power (mW/cm^2) for graphics
+        print('V: '+str(voltage)+' V; Current:'+str(current * 1000)+' mA; J: '+str((1000*current)/(dev_area*1e4))+' mA/cm^2; Current_PD: '+str(current_pd_a*1000)+' mA; P: '+str((((current_pd_a * 1000)/(si_p_area * 1e4))/int_si_spec) * int_spec)+' mW/cm^2; I: '+str((683 * ((current_pd_a/si_p_area)/int_si_spec) * eye_el))+' lux.')
 time_finish = time.time()
 print('time: '+str(time_finish-time_start)+' sec.')
 # Write the data in a csv
@@ -147,13 +145,9 @@ for i in range(steps):
         f.write(',')
         f.write(str(data_current[i]/(dev_area*1e4))) #Current (mA/cm^2)
         f.write(',')
-        f.write(str((alpha*(data_current_pd_a[i]/1000)))) # L (cd/m^2)
+        f.write(str((((current_pd_a * 1000)/(si_p_area * 1e4))/int_si_spec) * int_spec)) # Light power (mW/cm^2)
         f.write(',')
-        f.write(str(((q/hc) * (lambda_EQE / ksi) * ((data_current_pd_a[i]/pin_area) / (data_current[i]/dev_area))) * 100)) #EQE (%)
-        f.write(',')
-        f.write(str((alpha*(data_current_pd_a[i]/1000))/((data_current[i]/1000)/dev_area))) # LE (cd/A)
-        f.write(',')
-        f.write(str((alpha_eye / ksi) * ((data_current_pd_a[i]/pin_area) / ((data_current[i]/dev_area) * data_voltage[i])))) # PE (lm/W)
+        f.write(str(683 * ((current_pd_a/si_p_area)/int_si_spec) * eye_el)) #Illuminance (lux)
         f.write('\n')
 f.close()
 

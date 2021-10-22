@@ -64,9 +64,9 @@ dev_area = 4e-6 # dev area m^2
 
 """ Integral DATA """
 
-ksi = 14.64958 # 
-eye_el = 13.04835 #
-lambda_EQE = 2.54197E-5 #
+ksi = 1 # 
+eye_el = 1 #
+lambda_EQE = 1 #
 
 alpha = (phi_0 * eye_el) / (pi * pin_area * ksi)
 alpha_eye = (phi_0 * eye_el) #alpha for Luminous Power Efficiency

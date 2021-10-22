@@ -63,8 +63,7 @@ si_p_area = 1e-4 # 100 mm^2 Si-photodiod area m^2
 
 """ Area of the device """
 
-pin_area = 4e-6 # pinhole area m^2
-dev_area = 4e-6 # dev area m^2
+dev_area = 5e-6 # 5 mm^2 dev area m^2
 
 """ Integral DATA for Si-photodiod """
 

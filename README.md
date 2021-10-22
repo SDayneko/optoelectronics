@@ -71,6 +71,8 @@ sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
 
 In this example, the geometrical of the setup where the photodetector is placed on-axis in front of the indoor light source (white warm LED) to detect emitted light in the forward perpendicular direction is present in Figure 1. The distance (D) between the photodetector and white warm LED is chosen between 0.2 and 2 m (it depends on the emissivity of the white light source) to provide sufficient surface illumination.
 
+![The setup system to measure light intensity of white LED.](https://github.com/SDayneko/optoelectronics/blob/main/img/White_LED.png)
+
 Use the performance_PV.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.
 

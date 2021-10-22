@@ -97,7 +97,7 @@ The "int_si_spec" is equal:
 
 The "int_spec" is equal:
 
-![int_spec](https://github.com/SDayneko/optoelectronics/blob/main/img/int_si_spec.png)
+![int_spec](https://github.com/SDayneko/optoelectronics/blob/main/img/int_spec.png)
 
 The "eye_el" is equal:
 

@@ -71,7 +71,22 @@ sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
 
 In this example, the geometrical of the setup where the photodetector is placed on-axis in front of the indoor light source (white warm LED) to detect emitted light in the forward perpendicular direction is present in Figure 1. The distance (D) between the photodetector and white warm LED is chosen between 0.2 and 2 m (it depends on the emissivity of the white light source) to provide sufficient surface illumination.
 
-![The setup system to measure light intensity of white LED.](https://github.com/SDayneko/optoelectronics/blob/main/img/White_LED.png)
+![The setup system to measure light intensity of white LED.](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_1.png)
+
+To measure the electroluminescent spectrum of light source the spectrometer coupled to an optical fibre has used. The calibrated lamp of known spectral emissivity has used to obtain a spectral correction for the spectrometer and optical fibre combined system.
+
+The light intensity (Eλ), in W/m^2, is defined as:
+
+![Equation 1](https://github.com/SDayneko/optoelectronics/blob/main/img/Equation_1.png)
+
+where Ipd - the current density in the Si-photodiode (A/m^2); S(λ) - normalized spectrum of source (LED) is measured as a function of wavelength has units of “count”, R(λ) is a function of the wavelength of the calibrated Si photodiode has units of A/W (Figure 2).
+
+![Responsivity of the photodetector](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_2.png)
+
+The same result can be obtained by integrate the electroluminescent spectrum S'(λ) of the white warm LED by measuring calibrated spectrometer, optical fibre and integrating sphere. The electroluminescent spectrum S'(λ) of the white warm LED is shown in Supplementary Figure 3. Integrated this spectrum we obtained the light power (Pin) on the surface.
+
+![Electroluminescence spectrum of the white warm LED](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_3.png)
+
 
 Use the performance_PV.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.

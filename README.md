@@ -21,6 +21,9 @@ First, use your own adress of connection Keythley SMU to PC, here is an example 
 ```python
 sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
 ```
+
+![Keithley connection](https://github.com/SDayneko/optoelectronics/blob/main/img/connection_keithley.png)
+
 Then, use the next command to start script:
 ```bash
 python J-V_curve.py
@@ -36,6 +39,7 @@ or use the next command to start script:
 ```bash
 python check_connection.py
 ```
+![Keithley connection](https://github.com/SDayneko/optoelectronics/blob/main/img/connection_keithley.png)
 
 ## Script to measure light emitting diodes (OLEDs, PLEDs, QLEDs, QD-OLEDs and PeLEDs)
 <ul class="list-group">
@@ -53,6 +57,7 @@ First, use your own adress of connection Keythley SMU to PC, here is an example 
 ```python
 sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
 ```
+![Keithley connection](https://github.com/SDayneko/optoelectronics/blob/main/img/connection_keithley.png)
 
 ## Script to measure photovoltaic devices (OPVs, OSCs, PSCs and QDSCs)
 <ul class="list-group">
@@ -62,6 +67,10 @@ sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
   <li class="list-group-item">QDSCs - quantum dots solar cells</li>
 </ul>
 
+1. Geometrical of the setup and characteristics of the indoor light source.
+
+In this example, the geometrical of the setup where the photodetector is placed on-axis in front of the indoor light source (white warm LED) to detect emitted light in the forward perpendicular direction is present in Figure 1. The distance (D) between the photodetector and white warm LED is chosen between 0.2 and 2 m (it depends on the emissivity of the white light source) to provide sufficient surface illumination.
+
 Use the performance_PV.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.
 
@@ -69,6 +78,7 @@ First, use your own adress of connection Keythley SMU to PC, here is an example 
 ```python
 sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
 ```
+![Keithley connection](https://github.com/SDayneko/optoelectronics/blob/main/img/connection_keithley.png)
 
 ## License
 [MIT](https://github.com/SDayneko/optoelectronics/blob/main/LICENSE)

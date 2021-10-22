@@ -53,12 +53,6 @@ python check_connection.py
 Use the performance_LED.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.
 
-First, use your own adress of connection Keythley SMU to PC, here is an example of my conncetion in the script:
-```python
-sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
-```
-![Keithley connection](https://github.com/SDayneko/optoelectronics/blob/main/img/connection_keithley.png)
-
 ## Script to measure photovoltaic devices (OPVs, OSCs, PSCs and QDSCs)
 <ul class="list-group">
   <li class="list-group-item">OPVs - organic photovoltaics</li>
@@ -113,12 +107,6 @@ Also, change the size of the Si-photodiode ("si_p_area") and size of active area
 
 3. Use the performance_PV.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.
-
-First, use your own adress of connection Keythley SMU to PC, here is an example of my conncetion in the script:
-```python
-sm = SMU2612B('USB0::0x05E6::0x2612::4439973::INSTR')
-```
-![Keithley connection](https://github.com/SDayneko/optoelectronics/blob/main/img/connection_keithley.png)
 
 ## License
 [MIT](https://github.com/SDayneko/optoelectronics/blob/main/LICENSE)

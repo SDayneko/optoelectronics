@@ -1,10 +1,9 @@
 """
-Performance_LED program was written to measure current depends on the voltage on Channel A and measure current on Channel B.
-Also, programm calculated the L (cd/m^2), EQE (%), LE (cd/A), PE (lm/W) of the device.
+Performance_PV program was written to measure current depends on the voltage on Channel A and measure current on Channel B.
 The data will save in the CSV-file and the graphic of the data will save in the PDF-file.
 written by: Sergey Dayneko
 website: www.dayneko.org
-last modified: 2021-10-04
+last modified: 2021-10-23
 """
 
 from Keithley2612B import SMU2612B
@@ -165,14 +164,6 @@ ax1.set_xlabel('Voltage (V)')
 ax1.set_ylabel('Current (mA/cm^2)', color = color)
 ax1.plot(data_voltage, data_current_cm, color = color)
 ax1.tick_params(axis='y', labelcolor = color)
-
-ax2 = ax1.twinx()
-
-color = 'tab:red'
-ax2.set_ylabel('L (cd/m^2)', color = color)
-ax2.plot(data_voltage, data_L, color = color)
-ax2.tick_params(axis = 'y', labelcolor = color)
-ax2.set_yscale("log")
 
 plt.savefig(filename_pdf)
 plt.show()

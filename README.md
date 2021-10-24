@@ -85,7 +85,7 @@ Next, calculate the illuminance of a light source Ev in lm/m^2 = lux:
 
 ![Equation 2](https://github.com/SDayneko/optoelectronics/blob/main/img/Equation_2.png)
 
-where the coefficient Km is equal to 683 lm/W, V(λ) is the spectral luminosity factor for human photopic vision (Figure S4). Note that this function is usually given normalized at a wavelength of ~555 nm; in which case the function must be multiplied by a factor Km of ~683 lm/W before being employed in the calculations.
+where the coefficient Km is equal to 683 lm/W, V(λ) is the spectral luminosity factor for human photopic vision (Figure 4). Note that this function is usually given normalized at a wavelength of ~555 nm; in which case the function must be multiplied by a factor Km of ~683 lm/W before being employed in the calculations.
 
 ![The standard sensitivity curve of human eye.](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_4.png)
 

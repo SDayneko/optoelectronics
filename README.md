@@ -105,7 +105,7 @@ The "eye_el" is equal:
 
 Also, change the size of the Si-photodiode ("si_p_area") and size of active area of device ("dev_area")
 
-3. Use the performance_PV.py script to measure and calculate the performance of LEDs. 
+3. Use the performance_PV.py script to measure and calculate the performance of PVs and power of source. 
 All data will be saved in a csv-file.
 
 ## License

@@ -53,6 +53,9 @@ python check_connection.py
 Use the performance_LED.py script to measure and calculate the performance of LEDs. 
 All data will be saved in a csv-file.
 
+Parameters in the LED scrip (performance_LED.py) must calculate and changed. Please, contact me for additional consultation.
+
+
 ## Script to measure photovoltaic devices (OPVs, OSCs, PSCs and QDSCs)
 <ul class="list-group">
   <li class="list-group-item">OPVs - organic photovoltaics</li>
@@ -83,7 +86,7 @@ Next, calculate the illuminance of a light source Ev in lm/m^2 = lux:
 
 where the coefficient Km is equal to 683 lm/W, V(λ) is the spectral luminosity factor for human photopic vision. Note that this function is usually given normalized at a wavelength of ~555 nm; in which case the function must be multiplied by a factor Km of ~683 lm/W before being employed in the calculations.
 
-2. Parameters must calculate for the PV script (performance_PV.py) and changed. Please, contact me for additional consultation.
+2. Parameters in the PV scrip (performance_PV.py) must calculate and changed. Please, contact me for additional consultation.
 
 3. Use the performance_PV.py script to measure and calculate the performance of PVs and power of source. 
 All data will be saved in a csv-file.

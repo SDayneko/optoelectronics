@@ -89,21 +89,7 @@ where the coefficient Km is equal to 683 lm/W, V(λ) is the spectral luminosity 
 
 ![The standard sensitivity curve of human eye.](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_4.png)
 
-2. The next parameters must calculate for the PV script (performance_PV.py) and changed:
-
-The "int_si_spec" is equal:
-
-![int_si_spec](https://github.com/SDayneko/optoelectronics/blob/main/img/int_si_spec.png)
-
-The "int_spec" is equal:
-
-![int_spec](https://github.com/SDayneko/optoelectronics/blob/main/img/int_spec.png)
-
-The "eye_el" is equal:
-
-![eye_el](https://github.com/SDayneko/optoelectronics/blob/main/img/eye_el.png)
-
-Also, change the size of the Si-photodiode ("si_p_area") and size of active area of device ("dev_area")
+2. The next parameters must calculate for the PV script (performance_PV.py) and changed. Please concat to me for addition consultation.
 
 3. Use the performance_PV.py script to measure and calculate the performance of PVs and power of source. 
 All data will be saved in a csv-file.

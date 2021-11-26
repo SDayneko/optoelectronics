@@ -73,23 +73,17 @@ The light intensity (Eλ), in W/m^2, is defined as:
 
 ![Equation 1](https://github.com/SDayneko/optoelectronics/blob/main/img/Equation_1.png)
 
-where Ipd - the current density in the Si-photodiode (A/m^2); S(λ) - normalized spectrum of source (LED) is measured as a function of wavelength has units of “count”, R(λ) is a function of the wavelength of the calibrated Si photodiode has units of A/W (Figure 2).
+where Ipd - the current density in the Si-photodiode (A/m^2); S(λ) - normalized spectrum of source (LED) is measured as a function of wavelength has units of “count”, R(λ) is a function of the wavelength of the calibrated Si photodiode has units of A/W.
 
-![Responsivity of the photodetector](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_2.png)
-
-The same result can be obtained by integrate the electroluminescent spectrum S'(λ) of the white warm LED by measuring calibrated spectrometer, optical fibre and integrating sphere. The electroluminescent spectrum S'(λ) of the white warm LED is shown in Supplementary Figure 3. Integrated this spectrum we obtained the light power (Pin) on the surface.
-
-![Electroluminescence spectrum of the white warm LED](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_3.png)
+The same result can be obtained by integrate the electroluminescent spectrum S'(λ) of the white warm LED by measuring calibrated spectrometer, optical fibre and integrating sphere. The electroluminescent spectrum S'(λ) of the white warm LED. Integrated this spectrum we obtained the light power (Pin) on the surface.
 
 Next, calculate the illuminance of a light source Ev in lm/m^2 = lux:
 
 ![Equation 2](https://github.com/SDayneko/optoelectronics/blob/main/img/Equation_2.png)
 
-where the coefficient Km is equal to 683 lm/W, V(λ) is the spectral luminosity factor for human photopic vision (Figure 4). Note that this function is usually given normalized at a wavelength of ~555 nm; in which case the function must be multiplied by a factor Km of ~683 lm/W before being employed in the calculations.
+where the coefficient Km is equal to 683 lm/W, V(λ) is the spectral luminosity factor for human photopic vision. Note that this function is usually given normalized at a wavelength of ~555 nm; in which case the function must be multiplied by a factor Km of ~683 lm/W before being employed in the calculations.
 
-![The standard sensitivity curve of human eye.](https://github.com/SDayneko/optoelectronics/blob/main/img/Figure_4.png)
-
-2. The next parameters must calculate for the PV script (performance_PV.py) and changed. Please concat to me for addition consultation.
+2. Parameters must calculate for the PV script (performance_PV.py) and changed. Please, contact me for additional consultation.
 
 3. Use the performance_PV.py script to measure and calculate the performance of PVs and power of source. 
 All data will be saved in a csv-file.

@@ -93,5 +93,9 @@ where the coefficient Km is equal to 683 lm/W, V(λ) is the spectral luminosity 
 3. Use the performance_PV.py script to measure and calculate the performance of PVs and the power of the source. 
 All data will be saved in a csv-file.
 
+## Web Development Services
+
+This project is part of the web development services provided by [PVSensors.com](https://pvsensors.com/). We specialize in creating custom web applications, including job boards, e-commerce platforms, and business websites. Visit our website to learn more about our services and how we can help bring your project to life.
+
 ## License
 [MIT](https://github.com/SDayneko/optoelectronics/blob/main/LICENSE)
